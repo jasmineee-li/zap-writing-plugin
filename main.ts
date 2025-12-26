@@ -497,7 +497,7 @@ export default class DangerousWritingPlugin extends Plugin {
         : "Last sentence";
     this.showClickableNotice(
       `⛔ You stopped writing! ${penaltyTypeText} deleted!`,
-      0
+      5000
     );
 
     // Record session
