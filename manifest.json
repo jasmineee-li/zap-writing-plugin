@@ -1,6 +1,6 @@
 {
-  "id": "zap-writing",
-  "name": "Zap",
+  "id": "zap-dangerous-writing",
+  "name": "Zap: Dangerous Writing",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
   "description": "Run Zap writing sprints with time or word goals -- keep typing or lose your content!",
