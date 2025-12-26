@@ -1,0 +1,331 @@
+/* Dangerous Writing Plugin Styles */
+
+/* Warning Overlay */
+.dangerous-writing-active {
+	position: relative;
+}
+
+.dangerous-writing-warning-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 9999;
+	transition: background-color 0.3s ease;
+}
+
+/* Note: warning colors are set dynamically via JS based on settings */
+
+@keyframes pulse {
+	0%, 100% {
+		opacity: 0.5;
+	}
+	50% {
+		opacity: 0.8;
+	}
+}
+
+/* Status Bar */
+.dangerous-writing-status-bar {
+	font-weight: bold;
+}
+
+.dangerous-writing-status-bar.active {
+	color: var(--text-accent);
+}
+
+.dangerous-writing-status-bar.warning {
+	color: var(--text-error);
+	animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+/* Statistics View */
+.dangerous-writing-stats-period {
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.dangerous-writing-stats-period h3 {
+	margin-bottom: 0.75em;
+	color: var(--text-accent);
+}
+
+.dangerous-writing-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	gap: 1em;
+}
+
+.dangerous-writing-stat-card {
+	background: var(--background-secondary);
+	padding: 1em;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.dangerous-writing-stat-card .stat-value {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--text-accent);
+}
+
+.dangerous-writing-stat-card .stat-label {
+	font-size: 0.85em;
+	color: var(--text-muted);
+	margin-top: 0.25em;
+}
+
+/* Sessions List */
+.dangerous-writing-sessions-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.dangerous-writing-session-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75em;
+	background: var(--background-secondary);
+	border-radius: 6px;
+	font-size: 0.9em;
+}
+
+.dangerous-writing-session-item .session-date {
+	flex: 2;
+}
+
+.dangerous-writing-session-item .session-words {
+	flex: 1;
+	text-align: center;
+	color: var(--text-accent);
+}
+
+.dangerous-writing-session-item .session-duration {
+	flex: 1;
+	text-align: right;
+	color: var(--text-muted);
+}
+
+.dangerous-writing-stats-empty {
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+/* First Time Warning */
+.dangerous-writing-first-warning h2 {
+	color: var(--text-error);
+	text-align: center;
+}
+
+/* Content Warning in Modal */
+.dangerous-writing-content-warning {
+	background: var(--background-modifier-border);
+	padding: 1em;
+	border-radius: 6px;
+	margin: 1em 0;
+	border-left: 3px solid var(--text-error);
+}
+
+.dangerous-writing-content-warning p {
+	margin: 0;
+	color: var(--text-normal);
+}
+
+.dangerous-writing-content-warning .dw-warning-title {
+	font-weight: 700;
+	margin-bottom: 0.25em;
+}
+
+.dangerous-writing-content-warning .dw-warning-body {
+	margin-top: 0.15em;
+}
+
+.dangerous-writing-content-warning .dw-warning-tip {
+	margin-top: 0.5em;
+	color: var(--text-muted);
+	font-size: 0.9em;
+}
+
+/* Basic Stats in Settings */
+.dangerous-writing-basic-stats {
+	margin: 1em 0;
+}
+
+/* Preset Buttons */
+.dangerous-writing-presets {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.dangerous-writing-presets button {
+	padding: 0.25em 0.75em;
+	font-size: 0.9em;
+}
+
+/* Session modal */
+.dw-modal {
+  padding: 0;
+}
+
+.dw-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin: 0 0 1.25em 0;
+}
+
+/* Segmented toggle */
+.dw-seg {
+  display: flex;
+  width: 100%;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 1em;
+}
+
+.dw-seg-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dw-seg-btn:hover {
+  color: var(--text-normal);
+}
+
+.dw-seg-btn.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 600;
+}
+
+/* Picker area */
+.dw-picker {
+  margin-bottom: 1.5em;
+}
+
+/* Chips */
+.dw-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dw-chip {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dw-chip:hover {
+  background: var(--background-modifier-hover);
+}
+
+.dw-chip.is-active {
+  background: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+/* Custom input row */
+.dw-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dw-input-row input.dw-input {
+  width: 80px;
+  padding: 8px 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.dw-input-row input.dw-input:focus {
+  border-color: var(--interactive-accent);
+  outline: none;
+}
+
+.dw-unit {
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+/* Button row */
+.dw-btn-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 0.5em;
+}
+
+.dw-btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: var(--background-secondary);
+  color: var(--text-normal);
+}
+
+.dw-btn:hover {
+  background: var(--background-modifier-hover);
+}
+
+.dw-btn-cta {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.dw-btn-cta:hover {
+  filter: brightness(1.1);
+}
+
+/* Warning list */
+.dw-warning-list {
+  margin: 1em 0;
+  padding-left: 1.25em;
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+.dw-warning-list li {
+  margin-bottom: 0.4em;
+}
