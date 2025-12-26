@@ -37,7 +37,7 @@ export class SessionConfigModal extends Modal {
     contentEl.empty();
     contentEl.addClass("dw-modal");
 
-    this.setTitle("Start Session");
+    this.setTitle("Start Zap Session");
 
     // Brief warning line
     const penaltyText =
@@ -165,7 +165,7 @@ export class SessionConfigModal extends Modal {
     cancelBtn.onclick = () => this.close();
 
     const startBtn = btnRow.createEl("button", {
-      text: "Start",
+      text: "Start Zap Session",
       cls: "dw-btn dw-btn-cta",
     });
     startBtn.onclick = () => {
@@ -203,7 +203,7 @@ export class FirstTimeWarningModal extends Modal {
     const { contentEl } = this;
     contentEl.empty();
 
-    this.setTitle("⚠️ Dangerous Writing");
+    this.setTitle("⚠️ Zap");
 
     contentEl.createEl("p", {
       text: "This plugin deletes content if you stop typing. Practice mode is ON by default.",

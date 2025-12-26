@@ -1,9 +1,9 @@
 {
   "id": "dangerous-writing",
-  "name": "Dangerous Writing",
+  "name": "Zap: Dangerous Writing",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
-  "description": "A dangerous writing app experience - keep writing or lose everything!",
+  "description": "Zap writing sprints with time or word goals—keep typing or lose it.",
   "author": "Your Name",
   "authorUrl": "",
   "fundingUrl": "",

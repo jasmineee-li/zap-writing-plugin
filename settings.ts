@@ -58,7 +58,7 @@ export class DangerousWritingSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: 'Dangerous Writing Settings' });
+		containerEl.createEl('h2', { text: 'Zap Settings' });
 
 		new Setting(containerEl)
 			.setName('Default session duration (minutes)')

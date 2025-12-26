@@ -1,7 +1,7 @@
 {
 	"name": "dangerous-writing",
 	"version": "1.0.0",
-	"description": "A dangerous writing app experience for Obsidian",
+	"description": "Zap writing sprints for Obsidian with time or word goals",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",

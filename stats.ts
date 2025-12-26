@@ -22,7 +22,7 @@ export class StatsView extends ItemView {
   }
 
   getDisplayText(): string {
-    return "Dangerous Writing Stats";
+    return "Zap Stats";
   }
 
   getIcon(): string {
@@ -42,7 +42,7 @@ export class StatsView extends ItemView {
     const container = this.containerEl.children[1];
     container.empty();
 
-    container.createEl("h2", { text: "Dangerous Writing Statistics" });
+    container.createEl("h2", { text: "Zap Statistics" });
 
     // Time period filters
     const now = Date.now();
@@ -69,7 +69,7 @@ export class StatsView extends ItemView {
 
     if (this.sessions.length === 0) {
       container.createEl("p", {
-        text: "No sessions yet. Start writing dangerously!",
+        text: "No sessions yet. Start a Zap session!",
         cls: "dangerous-writing-stats-empty",
       });
     } else {

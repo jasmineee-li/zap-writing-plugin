@@ -71,18 +71,14 @@ export default class DangerousWritingPlugin extends Plugin {
     }
 
     // Add ribbon icon
-    this.addRibbonIcon(
-      "timer",
-      "Start Dangerous Writing Session",
-      (evt: MouseEvent) => {
-        this.startSession();
-      }
-    );
+    this.addRibbonIcon("zap", "Start Zap Session", (evt: MouseEvent) => {
+      this.startSession();
+    });
 
     // Add command
     this.addCommand({
       id: "start-dangerous-writing",
-      name: "Start dangerous writing session",
+      name: "Start Zap writing session",
       callback: () => {
         this.startSession();
       },
@@ -91,7 +87,7 @@ export default class DangerousWritingPlugin extends Plugin {
     // Add command to stop session
     this.addCommand({
       id: "stop-dangerous-writing",
-      name: "Stop dangerous writing session",
+      name: "Stop Zap writing session",
       checkCallback: (checking: boolean) => {
         if (checking) {
           return this.sessionActive;
@@ -332,13 +328,11 @@ export default class DangerousWritingPlugin extends Plugin {
 
     if (this.wordCountGoal !== null) {
       new Notice(
-        `Dangerous writing session started! Goal: ${this.wordCountGoal} words. Keep typing!`
+        `Zap session started! Goal: ${this.wordCountGoal} words. Keep typing!`
       );
     } else {
       const minutes = Math.floor(this.sessionDurationMs / 60000);
-      new Notice(
-        `Dangerous writing session started! ${minutes} minutes. Keep typing!`
-      );
+      new Notice(`Zap session started! ${minutes} minutes. Keep typing!`);
     }
   }
 

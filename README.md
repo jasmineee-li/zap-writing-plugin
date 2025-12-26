@@ -1,10 +1,11 @@
-# Dangerous Writing Plugin for Obsidian
+# Zap: A Dangerous Writing Plugin for Obsidian
 
-A "Most Dangerous Writing App" experience for Obsidian. Start a timed writing session and keep typing - if you stop for more than 5 seconds, your content gets deleted!
+A "Most Dangerous Writing App" experience for Obsidian. Run timed or word-goal writing sprints and keep typing—if you stop for more than 5 seconds, your content gets deleted!
 
 ## Features
 
 - **Timed Writing Sessions**: Set a duration (1-60 minutes) for your writing session
+- **Word Count Goals**: Run sprints to a target word count instead of a timer
 - **Idle Detection**: Stop typing for 5 seconds (configurable) and face the penalty
 - **Penalty Options**: Choose to delete entire file, last paragraph, or just last sentence
 - **Visual Warnings**: Progressive colored overlay warns you as idle time approaches
@@ -42,7 +43,7 @@ A "Most Dangerous Writing App" experience for Obsidian. Start a timed writing se
    - Open Settings → Community plugins
    - Turn off "Restricted mode" if prompted
    - Click "Reload plugins"
-   - Enable "Dangerous Writing"
+   - Enable "Zap"
 
 ### Quick Build Commands
 
@@ -60,8 +61,8 @@ npm run dev
 ## Usage
 
 1. Open a markdown file in Obsidian
-2. Click the timer icon (⏱️) in the ribbon, or use command palette: "Start dangerous writing session"
-3. Configure the session duration and click "Start Session"
+2. Click the zap icon (⚡) in the ribbon, or use command palette: "Start Zap writing session"
+3. Configure a time or word goal and click "Start Zap Session"
 4. Keep typing! If you stop for more than 5 seconds, content is deleted
 5. Complete the session to keep your content
 
@@ -70,6 +71,7 @@ npm run dev
 | Setting           | Description                                                      | Default       |
 | ----------------- | ---------------------------------------------------------------- | ------------- |
 | Session duration  | How long each writing session lasts                              | 5 minutes     |
+| Word count goal   | Default words to target when using word mode                     | 500 words     |
 | Idle timeout      | How long you can stop before penalty                             | 5 seconds     |
 | Penalty type      | What gets deleted: entire file, last paragraph, or last sentence | Entire file   |
 | Practice mode     | Enable to recover content after a penalty                        | On            |
@@ -91,9 +93,9 @@ View your writing history including:
 
 ## Commands
 
-- `Start dangerous writing session` - Begin a new session
-- `Stop dangerous writing session` - End the current session early
-- `Open writing statistics` - View your dangerous writing stats
+- `Start Zap writing session` - Begin a new session
+- `Stop Zap writing session` - End the current session early
+- `Open writing statistics` - View your Zap writing stats
 
 ## Safety Notes
 
@@ -103,4 +105,5 @@ View your writing history including:
 - The plugin tracks the active file - switching files ends the session
 - Make backups before disabling practice mode
 - Click any completion/penalty notice to dismiss it
+
 # dangerous-writing-plugin
